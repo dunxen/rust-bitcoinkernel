@@ -51,7 +51,7 @@ fn main() {
         .status()
         .unwrap();
 
-    let pkg_config_path = install_dir.join("lib/pkgconfig");
+    let pkg_config_path = install_dir.join("lib64/pkgconfig");
     env::set_var("PKG_CONFIG_PATH", pkg_config_path);
 
     let library = pkg_config::Config::new()
